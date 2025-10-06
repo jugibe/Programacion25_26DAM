@@ -14,6 +14,7 @@ public class Ejercicio15 {
 	public static void main(String[] args) {
 		//Declaracion 
 		String mes;
+		final double DESCUENTO= 15;
 		double precioInicial; 
 		double precioFinal;
 		Scanner teclado = new Scanner (System.in);
@@ -23,7 +24,16 @@ public class Ejercicio15 {
 		System.out.println("Introduce el mes");
 		teclado.nextLine();
 		mes = teclado.nextLine();
-		System.out.println(mes);
+		//proceso
+		if (mes.equals("Octubre")) {//precaucion comparar cadenas
+			precioFinal=precioInicial*(100-DESCUENTO)/100;
+			
+		}else  {
+			precioFinal=precioInicial;
+		}
+		//salida
+		System.out.println("El precio final de tus productos es " + precioFinal);
+		teclado.close();
 		
 
 	}
