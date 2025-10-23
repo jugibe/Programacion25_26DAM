@@ -9,9 +9,9 @@ public class Ejemplo2 {
 		System.out.println(numeroMayor(60, 15));
 		System.out.println(cantidadDivisores(29));
 		System.out.println(esPrimo(1123));
-		for(int i = 1;i<=100;i++) {
+		for (int i = 1; i <= 100; i++) {
 			if (esPrimo(i)) {
-				System.out.println("El numero "+i+" es primo");
+				System.out.println("El numero " + i + " es primo");
 			}
 		}
 	}
