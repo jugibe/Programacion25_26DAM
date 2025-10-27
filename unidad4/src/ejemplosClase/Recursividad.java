@@ -9,7 +9,7 @@ public class Recursividad {
 	public static void main(String[] args) {
 		//pruebaRecursividad();
 		//cuentaAtras(10);
-		System.out.println(factorial(120));
+		System.out.println(factorial(7));
 	}
 	public static void pruebaRecursividad() {
 		System.out.println("Hola, q tal");
