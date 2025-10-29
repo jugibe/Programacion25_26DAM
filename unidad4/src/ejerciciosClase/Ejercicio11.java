@@ -13,8 +13,19 @@ public class Ejercicio11 {
 			}
 		}
 		
-
 	}
+	//metodo que calcula si el numero es primo o no mas eficiente
+	public static boolean esPrimo2(int num) {
+		//bucle que busque si el numero partido por la mitad
+		for (int i=2; i<=num/2; i++) {
+			if (num%i==0) {
+			return false;	
+			}
+			
+		}
+		return true;
+	}
+	
 	//metodo que me calcula la cantidad de divisores de un numero 
 	public static int numeroDivisores(int num) {
 		
