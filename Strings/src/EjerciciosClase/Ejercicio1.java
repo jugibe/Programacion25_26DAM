@@ -7,7 +7,7 @@ package EjerciciosClase;
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
-
+		
 		do {
 			
 		} while (!validar());
