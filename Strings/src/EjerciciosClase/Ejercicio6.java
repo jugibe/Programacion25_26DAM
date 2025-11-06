@@ -18,14 +18,7 @@ public class Ejercicio6 {
 	}
 
 	public static boolean isCorreo(String correo) {
-		boolean arroba = correo.contains("@");
-		boolean punto = correo.contains(".");
-		if (!arroba || !punto) return false;
-		
-		int indexArroba = correo.indexOf('@');
-		int indexPunto = correo.lastIndexOf('.');
-		
-		if (indexArroba > indexPunto) return false;
-		return true;
+		int indexArroba = correo.indexOf('@'); // correo.indexOf('@') devuelve -1 si el el correo no tiene @
+		return indexArroba > 0 && indexArroba < correo.lastIndexOf('.');
 	}
 }
