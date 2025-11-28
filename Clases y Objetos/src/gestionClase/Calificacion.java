@@ -20,6 +20,7 @@ public class Calificacion {
 		this.modulo = modulo;
 		this.calificacion = calificacion;
 	}
+
 	/**
 	 * @return the modulo
 	 */
