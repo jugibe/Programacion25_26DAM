@@ -33,8 +33,12 @@ public class GestionAlumnos {
 		System.out.println(a1.obtenerMedia());
 		Grupo g = new Grupo("1º DAM", 5);
 		llenarGrupo(g);
-		System.out.println(g);
-		System.out.println(Arrays.toString(g.consultarCalificacionesAlumno(3)));
+		//Grupo todoAprobados = g.consultarAlumnosConTodoAprobado();
+		//System.out.println(todoAprobados);
+		Grupo mediaMayor5 = g.consultarAlumnosConTodoAprobado();
+		System.out.println(mediaMayor5);
+		//System.out.println(g);
+		//System.out.println(Arrays.toString(g.consultarCalificacionesAlumno(3)));
 	}
 
 	private static void llenarGrupo(Grupo g) {
@@ -48,7 +52,7 @@ public class GestionAlumnos {
 
 		g.getAlumnos()[1].insertar(new Calificacion("ingles", 10));
 		g.getAlumnos()[1].insertar(new Calificacion("programacion", 9));
-		g.getAlumnos()[1].insertar(new Calificacion("bases de datos", 8));
+		g.getAlumnos()[1].insertar(new Calificacion("bases de datos", 2));
 
 		g.getAlumnos()[2].insertar(new Calificacion("ingles", 7));
 		g.getAlumnos()[2].insertar(new Calificacion("programacion", 10));

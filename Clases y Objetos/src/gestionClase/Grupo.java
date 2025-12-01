@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class Grupo {
 	private String nombre;
-	Alumno[] alumnos;
+	private Alumno[] alumnos;
 /**
  * 
  * @param nombre del grupo
@@ -76,11 +76,36 @@ public class Grupo {
 		}
 		return null;
 	}
+	
 	/**
+	 * Devuelve un objeto de grupo con solo los alumnos que tengan todo aprobado
 	 * 
-	 * @return alumno 
+	 * @return grupo El grupo con los alumnos con todo aprobado
 	 */
 	public Grupo consultarAlumnosConTodoAprobado() {
-		return null;
+		Grupo grupo = new Grupo("aprobados", alumnos.length);
+		for (Alumno alumno : alumnos) {
+			// 'continue' indica un salto a la siguiente iteración dentro de un loop tanto 'for' como 'while'
+			// y no devuelve nada
+			if (alumno == null) continue;
+			if (alumno.todoAprobado()) grupo.insertar(alumno);
+		}
+		return grupo;
+	}
+	
+	/**
+	 * Devuelve un objeto de grupo con solo los alumnos que tengan media mayor de 5
+	 * 
+	 * @return grupo El grupo con los alumnos con media mayor a 5
+	 */
+	public Grupo consultarAlumnosMediaMayor5() {
+		Grupo grupo = new Grupo("MM5", alumnos.length);
+		for (Alumno alumno : alumnos) {
+			// 'continue' indica un salto a la siguiente iteración dentro de un loop tanto 'for' como 'while'
+			// y no devuelve nada
+			if (alumno == null) continue;
+			if (alumno.obtenerMedia() > 5) grupo.insertar(alumno);
+		}
+		return grupo;
 	}
 }
